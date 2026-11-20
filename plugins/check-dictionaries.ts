@@ -9,7 +9,7 @@
 import { existsSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import type { Plugin } from "vite";
-import { rawLocales, namespaces } from "../i18n/config.ts";
+import { rawLocales, namespaces } from "../src/i18n/config.ts";
 
 export default function checkDictionaries(options?: { dictDir?: string }): Plugin {
 	let dir = "";
@@ -23,7 +23,7 @@ export default function checkDictionaries(options?: { dictDir?: string }): Plugi
 			// import.meta.url once for the whole bundle — to the config file's
 			// own URL. Relative-to-module resolution is therefore impossible in
 			// config-bundled code; resolved.root is the reliable anchor.
-			dir = options?.dictDir ?? resolve(resolved.root, "i18n/dict");
+			dir = options?.dictDir ?? resolve(resolved.root, "src/i18n/dict");
 		},
 
 		buildStart() {

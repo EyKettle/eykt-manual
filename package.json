@@ -9,7 +9,7 @@
     "serve": "vite preview"
   },
   "imports": {
-    "#i18n": "./i18n/index.ts"
+    "#i18n": "./src/i18n/index.ts"
   },
   "dependencies": {
     "@solid-primitives/i18n": "3.0.0-next.4",
