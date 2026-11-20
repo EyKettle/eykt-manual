@@ -1,0 +1,5 @@
+node_modules/
+dist/
+
+# Auto-generated Type files
+**/*.d.ts
