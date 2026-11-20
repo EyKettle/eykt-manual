@@ -52,3 +52,28 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		vim.lsp.buf.format({ bufnr = args.buf, name = "oxfmt", async = false })
 	end,
 })
+
+local eykt_ui_root = vim.uv.fs_realpath(root .. "/node_modules/eykt-ui")
+local css_config = {
+	cmd = { "css-variable-lsp" },
+	filetypes = { "css", "scss", "html" },
+	root_dir = root_dir,
+}
+if eykt_ui_root then
+	local function workspace_folder(path)
+		return {
+			uri = vim.uri_from_fname(path),
+			name = vim.fs.basename(path),
+		}
+	end
+
+	css_config.workspace_folders = {
+		workspace_folder(root),
+		workspace_folder(eykt_ui_root),
+	}
+else
+	vim.notify("css-variable-lsp: cannot resolve node_modules/eykt-ui", vim.log.levels.WARN)
+end
+
+vim.lsp.config("css_variable_lsp", css_config)
+vim.lsp.enable("css_variable_lsp")
