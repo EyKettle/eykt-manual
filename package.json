@@ -18,6 +18,7 @@
     "@solidjs/web": "^2.0.2",
     "eykt-ui": "link:../../web/eykt-ui",
     "filesystem-routing": "^0.5.0",
+    "motion": "^14.14.0",
     "solid-js": "^2.0.2"
   },
   "devDependencies": {
