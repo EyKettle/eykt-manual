@@ -65,3 +65,18 @@
   color: var(--eykt-color-on-secondary);
   background-color: var(--eykt-color-secondary);
 }
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: var(--eykt-padding-large);
+
+  border-radius: var(--eykt-radius-large);
+  color: var(--eykt-color-on-surface);
+  background-color: var(--eykt-color-surface-container);
+}
+
+.article-card.press {
+  background-color: var(--eykt-color-surface-container-low);
+}
