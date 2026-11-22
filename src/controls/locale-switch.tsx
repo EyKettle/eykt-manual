@@ -13,16 +13,8 @@ const LocaleSwitch: Component = () => {
 					right: isChinese() ? "var(--eykt-space-2)" : "50%",
 				}}
 			/>
-			<Button
-				aria-disabled={isChinese() ? "false" : "true"}
-				onCall={() => setLocale("en")}
-				children="Eng"
-			/>
-			<Button
-				aria-disabled={isChinese() ? "true" : "false"}
-				onCall={() => setLocale("zh-Hans")}
-				children="中文"
-			/>
+			<Button disabled={!isChinese()} onCall={() => setLocale("en")} children="Eng" />
+			<Button disabled={isChinese()} onCall={() => setLocale("zh-Hans")} children="中文" />
 		</div>
 	);
 };
