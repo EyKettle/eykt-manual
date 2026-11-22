@@ -1,0 +1,59 @@
+.float-bar {
+  display: grid;
+  padding: var(--eykt-space-2);
+  place-items: center right;
+
+  position: absolute;
+  right: var(--eykt-space-6);
+  bottom: var(--eykt-space-6);
+
+  border-radius: var(--eykt-radius-large);
+  background-color: var(--eykt-color-surface-container);
+
+  button {
+    border-radius: var(--eykt-radius-medium);
+    color: var(--eykt-color-on-surface);
+    background-color: transparent;
+  }
+
+  button.hover {
+    background-color: var(--eykt-color-surface-container-high);
+  }
+
+  button.disable {
+    position: relative;
+    z-index: 10;
+
+    opacity: 1;
+    color: var(--eykt-color-on-primary);
+  }
+
+  .locale-switch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .slider {
+    position: absolute;
+    inset-block: var(--eykt-space-2);
+
+    border-radius: var(--eykt-radius-medium);
+    background-color: var(--eykt-color-primary);
+
+    transition: inset var(--eykt-duration-medium) var(--eykt-ease-standard);
+  }
+}
+
+.float-bar::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  translate: 0 var(--eykt-space-1);
+
+  opacity: var(--eykt-shadow-opacity);
+  border-radius: inherit;
+  background-color: var(--eykt-color-shadow);
+  filter: blur(var(--eykt-space-6));
+}

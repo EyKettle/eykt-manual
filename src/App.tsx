@@ -1,20 +1,15 @@
 import "./App.css";
-import { setLocale, t } from "#i18n";
-import { Button } from "eykt-ui";
+import "./styles/controls.scss";
 import { Router } from "./router";
+import FloatBar from "./controls/float-bar";
 
 export default function App() {
-	const handleLanguageSwitch = () => {
-		setLocale((old) => (old === "en" ? "zh-Hans" : "en"));
-	};
-
 	return (
 		<Router>
 			{(props) => (
 				<main class="preview page content">
-					<h1>{t("title.home")}</h1>
-					<Button onCall={handleLanguageSwitch}>{t("lang.switch")}</Button>
 					{props.children}
+					<FloatBar />
 				</main>
 			)}
 		</Router>
