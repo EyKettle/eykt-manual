@@ -57,3 +57,11 @@
   background-color: var(--eykt-color-shadow);
   filter: blur(var(--eykt-space-6));
 }
+
+.tag {
+  padding: var(--eykt-padding-small);
+
+  border-radius: var(--eykt-radius-large);
+  color: var(--eykt-color-on-secondary);
+  background-color: var(--eykt-color-secondary);
+}
