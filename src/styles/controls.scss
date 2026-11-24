@@ -13,11 +13,16 @@
   button {
     border-radius: var(--eykt-radius-medium);
     color: var(--eykt-color-on-surface);
-    background-color: transparent;
+    background-color: rgb(from var(--eykt-color-surface-container-highest) r g b / 0);
   }
 
   button.hover {
-    background-color: var(--eykt-color-surface-container-high);
+    filter: none;
+    background-color: var(--eykt-color-surface-container-highest);
+  }
+
+  button.press {
+    background-color: var(--eykt-color-surface-dim);
   }
 
   button.disable {
