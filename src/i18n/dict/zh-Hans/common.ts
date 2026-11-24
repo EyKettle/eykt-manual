@@ -1,11 +1,16 @@
 import type { DictionaryOf } from "../../types";
 
 export default {
-	"nav.home": "主页",
-	"nav.about": "关于",
-	"nav.back": "返回",
-	"title.home": "电水壶的 UI 套件",
-	"title.about": "Eykt-UI - 关于这个站点",
-	"demo.empty": "还没示例内容",
-	"lang.switch": "切换语言",
+	"empty.here": "这里没什么东西",
+	back: "返回",
+	home: "主页",
+	"home.title": "电水壶的说明书",
+	about: "关于",
+	"about.title": "关于这个站点",
+	"about.self": "一个用来烧水的电子设备",
+	articles: "文章",
+	"articles.title": "文章列表",
+	"articles.desc": "看看我写了什么",
+	moments: "动态",
+	"moments.desc": "了解我在想什么",
 } as const satisfies DictionaryOf<"common">;

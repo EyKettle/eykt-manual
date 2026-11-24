@@ -6,8 +6,8 @@ import Tag from "../tag";
 const ArticleCard: Component = () => {
 	return (
 		<Button class="article-card">
-			<h4>{t("title.about")}</h4>
-			<label>{t("demo.empty")}</label>
+			<h4>{t("about.title")}</h4>
+			<label>{t("articles.desc")}</label>
 			<div class="container column" style={{ gap: "var(--eykt-space-1)" }}>
 				<Tag id={0} />
 				<Tag id={1} />

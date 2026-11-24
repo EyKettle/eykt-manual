@@ -8,10 +8,10 @@ export default function () {
 
 	return (
 		<Box class="page wide">
-			<Title>{t("title.about")}</Title>
-			<Button onCall={() => navigate(-1)}>{t("nav.back")}</Button>
+			<Title>{t("about.title")}</Title>
+			<Button onCall={() => navigate(-1)}>{t("back")}</Button>
 			<div class="container column">
-				<label>{t("demo.empty")}</label>
+				<label>{t("empty.here")}</label>
 			</div>
 		</Box>
 	);

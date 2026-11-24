@@ -5,7 +5,7 @@ import ArticleList from "../controls/article/list";
 export default function () {
 	return (
 		<>
-			<Title>{t("title.home")}</Title>
+			<Title>{t("home.title")}</Title>
 			<ArticleList />
 		</>
 	);
