@@ -9,8 +9,8 @@ const LocaleSwitch: Component = () => {
 			<div
 				class="slider"
 				style={{
-					left: isChinese() ? "50%" : "var(--eykt-space-2)",
-					right: isChinese() ? "var(--eykt-space-2)" : "50%",
+					left: isChinese() ? "calc(50% + var(--eykt-space-1))" : "var(--eykt-space-2)",
+					right: isChinese() ? "var(--eykt-space-2)" : "calc(50% + var(--eykt-space-1))",
 				}}
 			/>
 			<Button disabled={!isChinese()} onCall={() => setLocale("en")} children="Eng" />

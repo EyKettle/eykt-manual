@@ -41,6 +41,19 @@
   .locale-switch {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: var(--eykt-space-1);
+
+    >button:first-of-type:not(.disable) {
+      border-top-right-radius: var(--eykt-radius-small);
+      border-bottom-right-radius: var(--eykt-radius-small);
+      transform-origin: center right;
+    }
+
+    >button:last-of-type:not(.disable) {
+      border-top-left-radius: var(--eykt-radius-small);
+      border-bottom-left-radius: var(--eykt-radius-small);
+      transform-origin: center left;
+    }
   }
 
   .slider {
