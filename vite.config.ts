@@ -10,7 +10,15 @@ export default defineConfig({
 	// `vite build` prerenders the shell into dist/client/index.html.
 	plugins: [
 		checkDictionaries(),
-		fontExtractor(),
+		fontExtractor({
+			type: "manual",
+			targets: [
+				{
+					fontName: "Material Symbols Outlined",
+					ligatures: ["article", "cognition"],
+				},
+			],
+		}),
 		solid({ start: { middleware: "./src/Middleware.ts" }, ssr: true }),
 		fileRoutes({
 			types: "src/routes.d.ts",

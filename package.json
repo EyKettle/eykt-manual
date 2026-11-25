@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "lint": "tsc --noEmit & oxlint src"
+    "lint": "tsc --noEmit & oxlint src",
+    "icon:shake": "tsx scripts/icon-tree-shaking/cli.ts",
+    "prebuild": "pnpm icon:shake"
   },
   "imports": {
     "#i18n": "./src/i18n/index.ts"
