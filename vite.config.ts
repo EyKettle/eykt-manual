@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import solid from "@solidjs/vite-plugin";
+import fontExtractor from "vite-font-extractor-plugin";
 import { fileRoutes } from "filesystem-routing/vite";
 import checkDictionaries from "./plugins/check-dictionaries.ts";
 
@@ -9,6 +10,7 @@ export default defineConfig({
 	// `vite build` prerenders the shell into dist/client/index.html.
 	plugins: [
 		checkDictionaries(),
+		fontExtractor(),
 		solid({ start: { middleware: "./src/Middleware.ts" }, ssr: true }),
 		fileRoutes({
 			types: "src/routes.d.ts",

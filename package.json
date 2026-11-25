@@ -21,7 +21,8 @@
     "filesystem-routing": "^0.5.0",
     "material-symbols": "^0.49.0",
     "motion": "^14.14.0",
-    "solid-js": "^2.0.2"
+    "solid-js": "^2.0.2",
+    "vite-font-extractor-plugin": "^3.1.0"
   },
   "devDependencies": {
     "@solidjs/vite-plugin": "^3.0.1",
