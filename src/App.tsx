@@ -1,5 +1,4 @@
 import "./App.css";
-import "./styles/controls.scss";
 import { Router } from "./router";
 import FloatBar from "./controls/float-bar";
 
